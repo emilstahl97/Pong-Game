@@ -35,6 +35,22 @@ ball.color("white")
 ball.penup()
 ball.goto(0, 0)
 
+#move paddle a up
+
+def paddle_a_up():
+    paddle_a.sety(paddle_a.ycor() + 20)
+
+
+def paddle_a_down():
+    paddle_a.sety(paddle_a.ycor() - 20)
+
+
+#keyboard binding
+
+wn.listen()
+wn.onkeypress(paddle_a_up, "w")
+wn.onkeypress(paddle_a_down, "s")
+
 #main game loop 
 
 while True:
