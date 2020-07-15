@@ -44,12 +44,21 @@ def paddle_a_up():
 def paddle_a_down():
     paddle_a.sety(paddle_a.ycor() - 20)
 
+def paddle_b_up():
+    paddle_b.sety(paddle_b.ycor() + 20)
+
+
+def paddle_b_down():
+    paddle_b.sety(paddle_b.ycor() - 20)
+
 
 #keyboard binding
 
 wn.listen()
 wn.onkeypress(paddle_a_up, "w")
 wn.onkeypress(paddle_a_down, "s")
+wn.onkeypress(paddle_b_up, "Up")
+wn.onkeypress(paddle_b_down, "Down")
 
 #main game loop 
 
